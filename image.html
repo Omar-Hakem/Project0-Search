@@ -6,9 +6,89 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Image Search</title>
+  <style>
+    body {
+      background-color: violet;
+    }
+
+    #go-back {
+      display: flex;
+      height: 100px;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    .link {
+      margin: 0.5rem;
+      background-color: #f4f4f4;
+      border-radius: 25px;
+      padding: 0.5rem;
+      transition: 0.5s linear;
+    }
+
+    .link:hover {
+      background-color: rgb(97, 5, 48);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: royalblue;
+    }
+
+    #main-content {
+      display: flex;
+      height: 700px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bar {
+      width: 500px;
+      height: 20px;
+      border-radius: 10px;
+      border-color: #777;
+      padding: 0.25rem;
+      margin: 00.5rem;
+      /* display: block; */
+    }
+
+    .button {
+      width: 200px;
+      padding: 0.25rem;
+      margin: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: rgb(34, 119, 41);
+
+    }
+
+    form {
+      display: flex;
+      height: 500px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="go-back">
+    <a href="index.html" class="link">Back To Google Search</a>
+  </div>
+  <div id="main-content">
+    <form action="https://google.com/search">
+      <input type="text" name="q" class="bar">
+      <input type="hidden" name="tbm" value="isch">
+      <input type="submit" value="Image Search" class="button">
+    </form>
+  </div>
 
 </body>
 
