@@ -9,7 +9,7 @@
   <style>
     #go-back {
       display: flex;
-      height: 100px;
+      height: 40px;
       justify-content: flex-end;
       align-items: flex-start;
     }
@@ -17,13 +17,14 @@
     .link {
       margin: 0.5rem;
       background-color: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
       border-radius: 25px;
       padding: 0.5rem;
       transition: 0.5s linear;
     }
 
     .link:hover {
-      background-color: salmon;
+      background-color: rgb(212, 69, 100);
     }
 
     a {
@@ -33,6 +34,66 @@
     a:visited {
       color: royalblue;
     }
+
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(212, 69, 100);
+      padding: 1rem;
+      margin: 2rem;
+    }
+
+    #main-content {
+      display: flex;
+      height: 700px;
+      width: 800px;
+      font-family: Arial, Helvetica, sans-serif;
+      justify-content: flex-start;
+      align-items: flex-start;
+      /* background-color: rgb(212, 69, 100); */
+      flex-direction: column;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
+      margin-left: 1rem;
+      /* background-color: royalblue; */
+    }
+
+    .label {
+      width: 200px;
+    }
+
+    .bar {
+      width: 350px;
+      height: 20px;
+      border-radius: 2px;
+      border-color: rgb(204, 201, 201);
+      padding: 0.25rem;
+    }
+
+    .search-button {
+      /* background-color: teal; */
+      padding: 1rem;
+      margin-left: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 00.5rem;
+    }
+
+    .button {
+      width: 150px;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      border-radius: 2px;
+      background-color: royalblue;
+      color: white;
+    }
+
+    .button:hover {
+      background-color: rgb(52, 62, 204);
+    }
   </style>
 </head>
 
@@ -40,6 +101,54 @@
   <div id="go-back">
     <a href="index.html" class="link">Back To Google Search</a>
   </div>
+  <h2>Advanced Search</h2>
+  <hr>
+  <div id="main-content">
+    <form action="https://google.com/search">
+      <div class="field">
+        <h3>Find pages with...</h3>
+      </div>
+      <div class="field">
+        <div class="label">
+          <label for="1">all these words:</label>
+        </div>
+        <div>
+          <input type="text" id="1" name="as_q" class="bar">
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">
+          <label for="2">this exact word or phrase:</label>
+        </div>
+        <div>
+          <input type="text" id="2" name="as_epq" class="bar">
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">
+          <label for="3">any of these words:</label>
+        </div>
+        <div>
+          <input type="text" id="3" name="as_oq" class="bar">
+        </div>
+      </div>
+      <div class="field">
+        <div class="label">
+          <label for="4">none of these words:</label>
+        </div>
+        <div>
+          <input type="text" id="4" name="as_eq" class="bar">
+        </div>
+      </div>
+      <div class="search-button">
+        <input type="submit" value="Advanced Search" class="button">
+      </div>
+      <input type="hidden" name="as_qdr" value="all">
+      <input type="hidden" name="as_occt" value="any">
+      <input type="hidden" name="safe" value="images">
+    </form>
+  </div>
+
 
 </body>
 
